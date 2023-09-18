@@ -7966,7 +7966,7 @@ button.bg-dark:hover {
 
 @supports ((position:-webkit-sticky) or (position:sticky)) {
     .sticky-top {
-        background: #e2e8e8;
+
         position: -webkit-sticky;
         position: sticky;
         top: 0;

@@ -1,13 +1,76 @@
 @extends('client.layout')
 @section('content')
-    @php
-        use Illuminate\Support\Str;
-    @endphp
+    <!-- Demo styles -->
+    <style>
+        #service_title:hover {
+            text-decoration: none;
+        }
+
+        #service_title h3 {
+            color: #000;
+        }
+
+        #service_title h3:hover {
+            color: rgb(104, 100, 78);
+
+        }
+    </style>
+
     <main class="content-area">
-        <div class="carousel slide" data-ride="carousel">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="owl-lazy d-block w-100"
+                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
+                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
+        {{-- <div class="carousel slide" data-ride="carousel">
             <div id="banner-home-page" class="owl-carousel owl-theme">
                 <div class="item active">
-                    <a href="#"><img class="owl-lazy d-block w-100"
+                    <a href="#">
+                        <img class="owl-lazy d-block w-100"
                             data-src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
                             alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
                     </a>
@@ -33,7 +96,9 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> --}}
+
+
         <div class="message-box">
             <div class="container">
                 <div class="row">
@@ -77,21 +142,11 @@
                 </div>
             </div>
         </div>
-        <section class="List_service section_p">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="text-center title_main">
-                            <h2>DỊCH VỤ VỆ SINH CÔNG NGHIỆP NỔI BẬT CỦA <span class="text-black">NĂM SAO</span></h2>
-                            <p>Công ty Dịch Vụ Vệ Sinh Năm Sao có đa dạng các dịch vụ vệ sinh chất lượng, uy tín,
-                                chuyên nghiệp, giá
-                                tốt tại tphcm và các tỉnh thành khác như Hà Nội, Đà Nẵng và Cần Thơ</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Start Events -->
-                <div id="events" class="events-box">
+
+        {{-- <section class="List_service section_p">
+
+            <div id="events" class="events-box">
                     <div class="container">
                         <div class="row">
                             @forelse ($services as $service)
@@ -109,7 +164,7 @@
                                                 {{ $service->title }}
                                             </h6>
                                         </a>
-                                        <p class="mt-3" > {{ Str::words($service->desc, 20, '...') }}</p>
+                                        <p class="mt-3"> {{ Str::words($service->desc, 20, '...') }}</p>
                                         <a href="{{ route('client.services.detail', $service->slug) }}"
                                             title="{{ $service->title }}" id="view-detail">Xem chi tiết >
                                         </a>
@@ -123,8 +178,62 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Events -->
+      
 
+        </section> --}}
+        <section class="List_service section_p">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center title_main">
+                            <h2>DỊCH VỤ VỆ SINH CÔNG NGHIỆP NỔI BẬT CỦA <span class="text-red">NĂM SAO</span></h2>
+                            <p>Công ty Dịch Vụ Vệ Sinh Năm Sao có đa dạng các dịch vụ vệ sinh chất lượng, uy tín, chuyên
+                                nghiệp, giá
+                                tốt tại tphcm và các tỉnh thành khác như Hà Nội, Đà Nẵng và Cần Thơ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    @forelse ($services as $service)
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="d-flex flex-column h-100 overflow-hidden service_items blogs_m">
+                                <div class="blogs_i">
+                                    <a href="{{ route('client.services.detail', $service->slug) }}">
+                                        <img class="lazy" data-src="{{ url($service->image) }}"
+                                            title="{{ $service->title }}" src=" " alt="{{ $service->title }}">
+                                    </a>
+                                </div>
+                                <a id="service_title" class="mb-auto"
+                                    href="{{ route('client.services.detail', $service->slug) }}">
+                                    <h3 class="text-center">
+                                        {{ $service->title }}
+                                    </h3>
+                                </a>
+                                <p class="webkit-box-3 box-intro">
+                                    {{ Str::words($service->desc, 22, '...') }}
+                                </p>
+                                <a class="btn__link blog_service_link"
+                                    href="{{ route('client.services.detail', $service->slug) }}">
+                                    <span>Chi Tiết</span>
+                                    <i class="fa-solid fa-arrow-right fa-fade"></i>
+                                </a>
+                            </div>
+                        </div>
+                    @empty
+                        Chưa có dịch vụ nào
+                    @endforelse
+
+
+
+
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <p class="text_link">Đưa ra các biện pháp vệ sinh chất lượng cao.
+                    <a class="category_link" href="dich-vu.html">Hãy xem thêm các bài viết của chúng tôi!</a>
+                </p>
+            </div>
             </div>
         </section>
         <section class="section-my-team">
@@ -242,56 +351,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 mb-4">
+                <div class="row" id="service">
+                    <div class="col-md-6 col-lg-4 mb-4" v-for="(item, index) in items" :key="index">
                         <div class="h-100 d-flex flex-column justify-content-between list-news_items blogs_m">
-                            <div class="list_news_item_img blogs_i"><a
-                                    href="tin-tuc/cong-trinh-lau-kinh-toa-nha-trung-tam-hanh-chinh-binh-duong.html"><img
-                                        class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/uploads/files/2021/01/31/thumbs/lau-kinh-TTHC-Binh-Duong-2-370x200-2.jpg"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                        alt="Công trình: Lau kính tòa nhà Trung tâm Hành chính Bình Dương"
-                                        data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-                            </div><a class="mb-auto"
-                                href="tin-tuc/cong-trinh-lau-kinh-toa-nha-trung-tam-hanh-chinh-binh-duong.html">
-                                <h3 class="title">Công trình: Lau kính tòa nhà Trung tâm Hành chính Bình Dương
+                            <div class="list_news_item_img blogs_i">
+                                <a :href="servicesDetailRoute.replace(':slug', item.slug)">
+                                    <img class="lazy" :src="'{{ url('') }}' + '/' + item.image"
+                                        :alt="item.title">
+                                    {{-- onload="pagespeed.CriticalImages.checkImageForCriticality(this);" --}}
+                                </a>
+                            </div>
+                            <a class="mb-auto text-decoration-none" id="service_title"
+                                :href="servicesDetailRoute.replace(':slug', item.slug)">
+                                <h3 class="title ">
+                                    @{{ item.title }}
                                 </h3>
                             </a>
-                            <p class="webkit-box-3 box-intro-news"> Vệ Sinh Công Nghiệp Năm triển khai dịch vụ lau
-                                kính bên ngoài
-                                tòa nhà Trung tâm Hành chính Bình Dương, đảm bảo uy tín, chất lượng, an toàn và giá
-                                tốt</p>
-                            <div class=""><a class="btn__link blog_news_link"
-                                    href="tin-tuc/cong-trinh-lau-kinh-toa-nha-trung-tam-hanh-chinh-binh-duong.html"><span>Chi
-                                        Tiết</span><i class="flaticon-right-arrow icon-arrow-right"></i></a></div>
+                            <p class="webkit-box-3 box-intro-news">
+                                @{{ formatDescription[index] }}
+                            </p>
+                            <div class="">
+                                <a class="btn__link blog_news_link " id="service_title"
+                                    :href="servicesDetailRoute.replace(':slug', item.slug)">
+                                    <span style="color: #000;">Chi Tiết</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="h-100 d-flex flex-column justify-content-between list-news_items blogs_m">
-                            <div class="list_news_item_img blogs_i"><a
-                                    href="tin-tuc/tap-the-ve-sinh-cong-nghiep-nam-sao-huong-ve-mien-trung.html"><img
-                                        class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/uploads/files/2021/01/17/thumbs/nam-sao-huong-ve-mien-trung-370x200-2.jpg"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                        alt="Tập thể Vệ Sinh Công Nghiệp Năm Sao hướng về Miền Trung"
-                                        data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-                            </div><a class="mb-auto"
-                                href="tin-tuc/tap-the-ve-sinh-cong-nghiep-nam-sao-huong-ve-mien-trung.html">
-                                <h3 class="title">Tập thể Vệ Sinh Công Nghiệp Năm Sao hướng về Miền Trung</h3>
-                            </a>
-                            <p class="webkit-box-3 box-intro-news">Ngày 22/10/2020, tập thể cán bộ công nhân viên
-                                công ty TNHH Vệ
-                                Sinh Công Nghiệp Năm Sao thực hiện chuyến thăm tặng những phần quà tận tay đến bà
-                                con</p>
-                            <div class=""><a class="btn__link blog_news_link"
-                                    href="tin-tuc/tap-the-ve-sinh-cong-nghiep-nam-sao-huong-ve-mien-trung.html"><span>Chi
-                                        Tiết</span></a></div>
-                        </div>
-                    </div>
-
                 </div>
+
 
             </div>
         </section>
@@ -420,4 +508,59 @@
         {{-- end-gg-map --}}
 
     </main>
+@endsection
+
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#service',
+            data: {
+                items: [],
+                servicesDetailRoute: @json(route('client.services.detail', ['slug' => ':slug']))
+
+            },
+            mounted() {
+                // data from backend
+                this.items = {!! json_encode($services) !!};
+            },
+            computed: {
+                formatDescription: function() {
+                    return this.items.map(function(item) {
+                        return item.desc.slice(0, 100) + '...';
+                    });
+                }
+            },
+        });
+    </script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                }
+            }
+        });
+    </script>
 @endsection

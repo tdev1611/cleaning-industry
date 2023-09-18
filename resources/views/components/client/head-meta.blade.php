@@ -7,7 +7,7 @@
 <meta name="keyword"
     content="vệ sinh công nghiệp,vệ sinh nhà,vệ sinh nhà sau xây dựng,giặt thảm văn phòng,lau kính">
 <meta property="og:locale" content="vi_VN" />
-<meta property="og:url" content="index.html" />
+<meta property="og:url" content="{{route('home')}}" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Vệ Sinh Công Nghiệp Năm Sao - Dịch Vụ Vệ Sinh Uy Tín TPHCM" />
 <meta property="og:image" content="uploads/files/2020/12/24/vscn-nam-sao-og.jpg" />

@@ -15,10 +15,17 @@ class ServiceController extends Controller
     }
 
 
+    function index()
+    {
+        $services = $this->service->getAll();
+        return view('client.services.index', compact('services'));
+    }
+
+
     function detail($slug)
     {
         $service = $this->service->detail($slug);
         $services = $this->service->getService($slug);
-        return view('client.services.detail',compact('service', 'services'));
+        return view('client.services.detail', compact('service', 'services'));
     }
 }

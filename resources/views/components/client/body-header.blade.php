@@ -5,9 +5,7 @@
                 <div class="d-none d-lg-block col-md-2 col-lg-2">
                     <div class="logo_web">
                         <a href="{{ route('home') }}">
-                            <img src="uploads/files/2020/09/06/vesinhcongnghiep-logo.png" alt="logo header 1"
-                                data-pagespeed-url-hash="4270396041"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                            <img src="" alt="logo header 1" data-pagespeed-url-hash="4270396041" />
                         </a>
                     </div>
                 </div>
@@ -15,16 +13,14 @@
                     <div class="menu_main">
                         <nav class="navbar navbar-expand-lg navbar-dark p-lg-0">
                             <a class="d-lg-none" href="{{ route('home') }}" style="width: 25%;">
-                                <img src="uploads/files/2020/09/06/vesinhcongnghiep-logo.png" alt="logo header 2"
-                                    data-pagespeed-url-hash="4270396041"
-                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                <img src="" alt="logo header 2" data-pagespeed-url-hash="4270396041" />
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                                 <ul class="nav navbar-nav headMenu">
-                                    <li class="active nav-item menu_item">
+                                    <li class="nav-item menu_item {{ request()->is('/') ? 'active' : '' }}">
                                         <a class="nav-link sub-link" data-toggle="" href="{{ route('home') }}"
                                             title="Trang chủ">
                                             Trang chủ
@@ -36,12 +32,19 @@
                                             Giới thiệu
                                         </a>
                                     </li>
-                                    <li class="nav-item dropdown menu_item">
+                                    <li
+                                        class="nav-item dropdown menu_item  {{ preg_match('/^dich-vu\b/', request()->path()) ? 'active' : '' }}">
                                         <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
                                             href="dich-vu.html" title="Dịch vụ">
                                             Dịch vụ
                                         </a>
                                         <ul class="nav dropdown-menu hide">
+                                            <li class="nav-item menu_item">
+                                                <a class="nav-link sub-link" data-toggle=""
+                                                    href="{{ route('client.services.index') }}" title="Tất cả dịch vụ">
+                                                    Tất cả dịch vụ
+                                                </a>
+                                            </li>
                                             @foreach ($services as $service)
                                                 <li class="nav-item menu_item">
                                                     <a class="nav-link sub-link" data-toggle=""
@@ -51,8 +54,6 @@
                                                     </a>
                                                 </li>
                                             @endforeach
-
-
 
                                         </ul>
                                     </li>

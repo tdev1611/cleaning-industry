@@ -91,7 +91,7 @@
                                 <div class="mb-3 col-md-6">
                                     <label for="ordinal" class="form-label">Thứ tự </label>
                                     <input class="form-control" type="number" name="ordinal" id="ordinal"
-                                        placeholder="Thứ tự sắp xếp"  value="{{ old('ordinal',$service->ordinal) }}">
+                                        placeholder="Thứ tự sắp xếp" value="{{ old('ordinal', $service->ordinal) }}">
                                     @error('ordinal')
                                         <small class="text-danger">
                                             {{ $message }}
@@ -120,7 +120,7 @@
                                             {{ old('status') == 2 ? 'selected' : '' }}> Ẩn
                                         </option>
                                     </select>
-                                    </select>
+
                                     @error('status')
                                         <small class="text-danger">
                                             {{ $message }}

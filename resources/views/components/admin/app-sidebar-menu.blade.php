@@ -204,18 +204,18 @@
                     <!--end:Menu link-->
                 </div>
                 <!--end:Menu item-->
-                    <!--begin:Menu item-->
-                    <div class="menu-item">
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="{{ route('admin.services.index') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Danh sách dịch vụ</span>
-                        </a>
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('admin.services.index') }}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Danh sách dịch vụ</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
             </div>
             <!--end:Menu sub-->
         </div>
@@ -234,7 +234,7 @@
                     <!--end::Svg Icon-->
                 </span>
                 <span class="menu-title">
-                    <h5 style="color:gray">Danh sách nạp tiền</h5>
+                    <h5 style="color:gray">Liên hệ khách hàng</h5>
                 </span>
                 <span class="menu-arrow"></span>
             </span>
@@ -245,11 +245,11 @@
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="">
+                    <a class="menu-link" href="{{ route('admin.contacts.index') }}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
-                        <span class="menu-title">Nạp tiền</span>
+                        <span class="menu-title">Liên hệ</span>
                     </a>
                     <!--end:Menu link-->
                 </div>

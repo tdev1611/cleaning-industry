@@ -10,17 +10,26 @@
     {{-- meta --}}
     <x-client.head-meta />
     {{-- meta --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('client/style/assets/home.min.css') }}">
     <link rel="stylesheet" href="{{ asset('client/style/assets/styles.min.css') }}">
     <link rel="stylesheet" href="{{ asset('client/style/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('client/style/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ asset('client/style/css/slide.css') }}">
     {{-- logo --}}
     <x-client.head-logo />
     {{-- logo --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    {{-- <link rel="manifest" href="themes/vscn-2020/assets/fav-icon/manifest.json"> --}}
+
+    <script src="{{ asset('client/style/assets/script.min.js') }}" data-render="LPTech.Asia"></script>
+
+
+    {{-- alert --}}
+
+
     <meta name="msapplication-TileColor" content="#ffffff">
 
     <meta name="theme-color" content="#ffffff">
@@ -32,7 +41,7 @@
     <x-client.body-header />
 
     <main>
-     @yield('content')
+        @yield('content')
     </main>
     <footer>
 
@@ -40,25 +49,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-3 col-lg-3">
-                        <div class="footerLogo"><img class="lazy"
-                                src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
+                        <div class="footerLogo">
+                            <img class="lazy" src=""
                                 data-src="https://vesinhcongnghiep.com/./uploads/files/2020/08/03/Logoamban.png"
-                                alt="icon logo 1" data-pagespeed-url-hash="2013785254"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></div>
+                                alt="icon logo 1" data-pagespeed-url-hash="2013785254" />
+                        </div>
                         <p>Dịch vụ của công ty Năm sao bao gồm: Vệ sinh công nghiệp, Vệ sinh nhà, Vệ sinh văn phòng, Vệ
                             sinh nhà
                             xưởng, Lau kính nhà cao tầng, Giặt thảm văn phòng, Giặt ghế sofa, Giặt ghế văn phòng vui
                             lòng gọi số 0936
-                            750 009 để được báo giá miễn phí.</p><a href="http://online.gov.vn/Home/WebDetails/73995"
-                            target="_blank" rel="noopener nofollow"
+                            750 009 để được báo giá miễn phí.</p>
+                        <a href="http://online.gov.vn/Home/WebDetails/73995" target="_blank" rel="noopener nofollow"
                             title="vesinhcongnghiep.com hiện đã có trong Danh sách website TMĐT bán hàng đã thực hiện thủ tục thông báo với Bộ Công Thương công bố tại Cổng thông tin Quản lý hoạt động TMĐT."
-                            class="dmca-badge"><img class="lazy"
-                                src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
+                            class="dmca-badge">
+                            <img class="lazy"
                                 data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/logoSaleNoti.png"
                                 style="width:150px !important"
                                 alt="vesinhcongnghiep.com hiện đã có trong Danh sách website TMĐT bán hàng đã thực hiện thủ tục thông báo với Bộ Công Thương công bố tại Cổng thông tin Quản lý hoạt động TMĐT."
-                                data-pagespeed-url-hash="2013785254"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                                data-pagespeed-url-hash="2013785254">
+                        </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3">
                         <p>TIN MỚI</p>
@@ -111,8 +120,8 @@
                             <li itemprop="name"><a itemprop="url" href="tuyen-dung.html" title="Tuyển Dụng">
                                     Tuyển Dụng
                                 </a></li>
-                            <li itemprop="name"><a itemprop="url"
-                                    href="tin-tuc/chinh-sach-bao-mat-cong-ty-nam-sao.html" title="Chính sách bảo mật">
+                            <li itemprop="name"><a itemprop="url" href="tin-tuc/chinh-sach-bao-mat-cong-ty-nam-sao.html"
+                                    title="Chính sách bảo mật">
                                     Chính sách bảo mật
                                 </a></li>
                             <li itemprop="name"><a itemprop="url"
@@ -133,42 +142,33 @@
                                 <li>
                                     <img class="lazy"
                                         data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic1.png"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                        alt="icon loader 1" data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                        alt="icon loader 1" data-pagespeed-url-hash="2013785254" />
                                     33/110C Tô Ký, phường Tân Chánh Hiệp, Quận 12, TPHCM
                                 </li>
                                 <li><img class="lazy"
                                         data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic2.png"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                        alt="icon loader 2" data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                        alt="icon loader 2" data-pagespeed-url-hash="2013785254" />
                                     028.3886 8899 - 0936 750 009
                                 </li>
                                 <li><img class="lazy"
                                         data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic3.png"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                        alt="icon loader 3" data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                        alt="icon loader 3" data-pagespeed-url-hash="2013785254" />
                                     vesinhnamsao@gmail.com
                                 </li>
-                                <li><img class="lazy"
+                                <li>
+                                    <img class="lazy"
                                         data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic4.png"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                        alt="icon loader 4" data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                        alt="icon loader 4" data-pagespeed-url-hash="2013785254" />
                                     http://vesinhcongnghiep.com
-                                </li><a
-                                    href="https://www.dmca.com/Protection/Status.aspx?ID=19a709b7-2311-40b9-8a49-3521875aad73&amp;refurl=https://vesinhcongnghiep.com/"
+                                </li>
+                                <a href="https://www.dmca.com/Protection/Status.aspx?ID=19a709b7-2311-40b9-8a49-3521875aad73&amp;refurl=https://vesinhcongnghiep.com/"
                                     target="_blank" rel="noopener nofollow"
                                     title="Nội dung từ website này được đăng ký bản quyền DMCA. Không được sao chép khi chưa có sự cho phép của LPTech EC Co,.. ltd."
                                     class="dmca-badge"><img class="lazy"
-                                        src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
                                         data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/dmca-badge.png"
                                         style="width:150px !important"
                                         alt="Nội dung từ website này được đăng ký bản quyền DMCA. Không được sao chép khi chưa có sự cho phép của LPTech EC Co,.. ltd."
-                                        data-pagespeed-url-hash="2013785254"
-                                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                                        data-pagespeed-url-hash="2013785254"></a>
                             </ul>
                         </div>
                     </div>
@@ -195,42 +195,19 @@
         </div>
     </footer>
 
-    {{-- <div class="cta">
-        <div class="collapse" id="showcta">
-            <div class="card card-body">
-                <ul class="cta-lptech">
-                    <li class="cta-item-1"><a aria-label="gửi mail cho Vệ Sinh Công Nghiệp"
-                            href="http://messenger.com/t/360720404047428" target="_blank" rel="noopener nofollow"
-                            title="Đăng ký tư vấn Vệ Sinh Công Nghiệp"><i class="flaticon-messenger"></i></a></li>
-                    <li class="cta-item-2"><a onclick="return gtag_report_conversion('tel:0936750009');"
-                            aria-label="gọi điện thoại cho Vệ Sinh Công Nghiệp" href="tel:0936750009"
-                            title="gọi điện thoại cho Vệ Sinh Công Nghiệp" rel="noopener">
-                            <div class="animated infinite zoomIn mypage-alo-ph-circle"></div>
-                            <div class="animated infinite pulse mypage-alo-ph-circle-fill"></div><i
-                                class="flaticon-phone-ringing"></i>
-                        </a></li>
-                    <li class="cta-item-3"><a target="_blank" href="https://zalo.me/0936750009"
-                            title="Chat zalo voi Vệ Sinh Công Nghiệp" rel="noopener nofollow" class="zalo"
-                            aria-label="gọi zalo cho Vệ Sinh Công Nghiệp"><img class="lazy"
-                                src="themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/icon-chat-zalo.png"
-                                alt="icon zalo" data-pagespeed-url-hash="2013785254"
-                                onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- <p class="call"><a class="btn btn-primary btn-cta"><i class="flaticon-call-center-agent"></i></a></p> -->
-    </div> --}}
 
 
 
-    <script src="{{ asset('client/style/assets/script.min.js') }}" data-render="LPTech.Asia"></script>
     <script src="{{ asset('client/themes/vscn-2020/assets/vendors/slick.js') }}"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    @yield('js')
 
     <script>
-        testimonialHome();
+        // testimonialHome();
         bannerProject();
     </script>
 

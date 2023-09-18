@@ -134,7 +134,7 @@
                                                 </div>
 
                                             @empty
-                                                <td colspan="6">Chưa có sản phẩm nào</td>
+                                                <td colspan="6">Chưa có dịch vụ nào</td>
                                             @endforelse
 
 
