@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Client\ServiceController;
+use App\Http\Controllers\Client\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,13 @@ use App\Http\Controllers\Client\ServiceController;
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
 
+Route::get('/dich-vu/', [ServiceController::class, 'index'])->name('client.services.index');
 Route::get('/dich-vu/{slug}', [ServiceController::class, 'detail'])->name('client.services.detail');
+
+
+// contact
+Route::post('/contact}', [ContactController::class, 'contact_post'])->name('client.contact.post');
+
 
 
 
