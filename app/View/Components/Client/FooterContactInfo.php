@@ -4,6 +4,8 @@ namespace App\View\Components\Client;
 
 use Illuminate\View\Component;
 use App\Models\Contact_Info;
+use App\Models\Introduce;
+
 class FooterContactInfo extends Component
 {
     /**
@@ -12,9 +14,11 @@ class FooterContactInfo extends Component
      * @return void
      */
     protected $contact_Info;
-    public function __construct(Contact_Info $contact_Info)
+    protected $introduce;
+    public function __construct(Contact_Info $contact_Info, Introduce $introduce)
     {
         $this->contact_Info = $contact_Info;
+        $this->introduce = $introduce;
     }
 
     /**
@@ -24,8 +28,8 @@ class FooterContactInfo extends Component
      */
     public function render()
     {
-        $contact = $this->contact_Info->where('status',1)->first();
-
-        return view('components.client.footer-contact-info',compact('contact'));
+        $contact = $this->contact_Info->where('status', 1)->first();
+        $introduce = $this->introduce->select('title')->first();
+        return view('components.client.footer-contact-info', compact('contact','introduce'));
     }
 }

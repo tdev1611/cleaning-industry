@@ -7,6 +7,7 @@ use App\Services\Client\ContactService;
 use Illuminate\Http\Request;
 
 use App\Models\Contact_Info;
+use App\Models\Introduce;
 
 class ContactController extends Controller
 {
@@ -22,7 +23,8 @@ class ContactController extends Controller
     function index()
     {
         $contact =  $this->contact_Info->where('status', 1)->first();
-        return view('client.contact.index', compact('contact'));
+        $intro = Introduce::select('title')->first();
+        return view('client.contact.index', compact('contact', 'intro'));
     }
 
 

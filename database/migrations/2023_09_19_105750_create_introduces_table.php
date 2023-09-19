@@ -15,10 +15,14 @@ class CreateIntroducesTable extends Migration
     {
         Schema::create('introduces', function (Blueprint $table) {
             $table->id();
-            $table->string('name_company');
+            $table->string('title');
+            $table->string('slug');
             $table->string('license_date');
             $table->string('tax_code');
             $table->text('service');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('managed_by');
             $table->tinyInteger('status');
 
             $table->timestamps();

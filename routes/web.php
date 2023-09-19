@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Client\ServiceController;
 use App\Http\Controllers\Client\ContactController;
+use App\Http\Controllers\Client\IntroduceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,14 @@ use App\Http\Controllers\Client\ContactController;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
+
+
+// IntroduceController
+
+Route::get('/gioi-thieu/{id}', [IntroduceController::class, 'index'])->name('client.introduce.index');
+
+
+// services
 
 Route::get('/dich-vu/', [ServiceController::class, 'index'])->name('client.services.index');
 Route::get('/dich-vu/{slug}', [ServiceController::class, 'detail'])->name('client.services.detail');

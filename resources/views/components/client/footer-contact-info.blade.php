@@ -1,6 +1,6 @@
 <ul>
     <li>
-        CÔNG TY TNHH VỆ SINH CÔNG NGHIỆP NĂM SAO
+       <h4> {{ $introduce->title }}</h4>
     </li>
     <li> <i class="fa-solid fa-phone fa-shake mt-1 mr-2"></i>
         {{ $contact ? $contact->phone : null }}

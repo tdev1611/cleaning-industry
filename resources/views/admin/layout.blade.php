@@ -409,7 +409,7 @@
                             <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
 
                                 <li class="menu-item">
-                                    <a href="#" class="menu-link px-2">2H</a>
+                                    <a href="#" class="menu-link px-2">TDEV</a>
                                 </li>
                             </ul>
                         </div>
@@ -455,7 +455,7 @@
             });
         })
     </script>
-    
+
     <x-admin.create-slug />
 
     @yield('js')

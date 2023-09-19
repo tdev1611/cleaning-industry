@@ -6,19 +6,20 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Introduce;
 use Illuminate\Support\Facades\Validator;
-class IntroduceController extends Controller
+
+class introduceController extends Controller
 {
-  
-    protected $Introduce;
-    function __construct(Introduce $Introduce)
+
+    protected $introduce;
+    function __construct(Introduce $introduce)
     {
-        $this->Introduce = $Introduce;
+        $this->introduce = $introduce;
     }
 
     function create()
     {
-        $contact =  $this->Introduce->first();
-        return view('admin.contacts-info.add', compact('contact'));
+        $introduce =  $this->introduce->first();
+        return view('admin.introduces.add', compact('introduce'));
     }
 
 
@@ -30,7 +31,7 @@ class IntroduceController extends Controller
             if ($validator->fails()) {
                 throw new \Exception($validator->errors()->first());
             }
-            $this->Introduce->create($data);
+            $this->introduce->create($data);
             return back()->with('success', 'Thêm thông tin thành công');
         } catch (\Exception $e) {
             return back()->withErrors($validator)->with('error', $e->getMessage())->withInput();
@@ -47,7 +48,7 @@ class IntroduceController extends Controller
             if ($validator->fails()) {
                 throw new \Exception($validator->errors()->first());
             }
-            $this->Introduce->where('id', $id)->update($data);
+            $this->introduce->where('id', $id)->update($data);
             $message = 'Cập nhât  thông tin thành công!';
             return back()->with('success', $message);
         } catch (\Exception $e) {
@@ -59,14 +60,16 @@ class IntroduceController extends Controller
     function validateStore($data)
     {
         $validator = Validator::make($data, [
-            'phone' => 'required|max:255',
-            'email' => 'required|email',
-            'address' => 'required|string',
-            'link' => 'required|string',
+            'title' => 'required|max:255',
+            'slug' => 'required|max:255',
+            'license_date' => 'required',
+            'tax_code' => 'required|string',
+            'service' => 'required|string',
             'status' => 'in:1,2',
+            'address' => 'required',
+            'phone' => 'required|numeric',
+            'managed_by' => 'required',
         ]);
         return $validator;
     }
-
-
 }

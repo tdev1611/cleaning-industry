@@ -5,6 +5,7 @@ namespace App\View\Components\Client;
 use Illuminate\View\Component;
 use App\Services\Client\HeaderNavService;
 
+
 class BodyHeader extends Component
 {
     /**
@@ -18,10 +19,12 @@ class BodyHeader extends Component
         $this->headerNavService = $headerNavService;
     }
 
-  
+
     public function render()
     {
         $services = $this->headerNavService->getService();
-        return view('components.client.body-header',compact('services'));
+
+        $introduce = $this->headerNavService->getSlug();
+        return view('components.client.body-header', compact('services','introduce'));
     }
 }

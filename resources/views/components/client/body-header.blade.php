@@ -27,8 +27,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item menu_item">
-                                        <a class="nav-link sub-link" data-toggle=""
-                                            href="gioi-thieu/ve-sinh-cong-nghiep-nam-sao.html" title="Giới thiệu">
+                                        <a class="nav-link sub-link" data-toggle="" href="{{ route('client.introduce.index',$introduce->slug) }}" title="Giới thiệu">
                                             Giới thiệu
                                         </a>
                                     </li>
@@ -118,8 +117,7 @@
                                                 </a></li>
                                         </ul>
                                     </li>
-                                    <li
-                                        class="nav-item menu_item {{ request()->is('lien-he') ? 'active' : '' }}">
+                                    <li class="nav-item menu_item {{ request()->is('lien-he') ? 'active' : '' }}">
                                         <a class="nav-link sub-link" data-toggle=""
                                             href="{{ route('client.contact.index') }}" title="Liên hệ">
                                             Liên hệ

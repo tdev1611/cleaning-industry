@@ -4,8 +4,10 @@
 <script>
     tinymce.init({
         selector: '#content',
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount image code',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | code | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount image code preview',
+
+
+        toolbar: 'undo redo | blocks fontfamily fontsize | preview| bold italic underline strikethrough | link image media table | code | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         image_title: true,
         automatic_uploads: true,
         file_picker_types: 'image',

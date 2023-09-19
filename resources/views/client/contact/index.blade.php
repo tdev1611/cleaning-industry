@@ -16,7 +16,7 @@
                         nào xin liên hệ với chúng tôi theo thông tin bên dưới đây.
                         <br />
                     </p>
-                    <h5>Công ty TNHH Vệ Sinh Công Nghiệp Năm Sao</h5>
+                    <h5>{{ $intro? $intro->title : null }}</h5>
                     <ul class="list_contact">
                         <li>
                             <i class="fa-solid fa-phone fa-shake"></i>
