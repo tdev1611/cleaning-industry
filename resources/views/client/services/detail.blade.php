@@ -35,19 +35,20 @@
                             TIN TỨC MỚI
                         </div>
                         <article class="s-sideNavArticle">
-                            <div class="box_list_news"><img class="lazy "
-                                    src="../themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
+                            <div class="box_list_news">
+                                <img class="lazy " src="../themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
                                     data-src="https://vesinhcongnghiep.com/uploads/files/2023/04/14/thumbs/May-nuoc-nong-1-1--105x95.png"
-                                    alt="Phân biệt các loại máy nước nóng và cách chọn mua sản phẩm phù hợp" />
-                                <h3 class="title"><a
-                                        href="phan-biet-cac-loai-may-nuoc-nong-va-cach-chon-mua-san-pham-phu-hop.html">
+                                    alt="" />
+                                <h3 class="title">
+                                    <a href="phan-biet-cac-loai-may-nuoc-nong-va-cach-chon-mua-san-pham-phu-hop.html">
                                         Phân biệt các loại máy nước nóng và cách chọn mua sản phẩm phù hợp
-                                    </a></h3>
+                                    </a>
+                                </h3>
                                 <ul>
                                     <li>
                                         <span>
                                             <i class="fa-solid fa-calendar-days"></i>
-                                            14-04-2023
+
                                         </span>
                                     </li>
                                 </ul>

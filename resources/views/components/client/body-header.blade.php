@@ -84,61 +84,27 @@
                                                 </a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item dropdown menu_item">
-                                        <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
-                                            href="san-pham.html" title="Sản phẩm">
-                                            Sản phẩm
-                                        </a>
-                                        <ul class="nav dropdown-menu hide">
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="may-hut-bui.html" title="Máy hút bụi">
-                                                    Máy hút bụi
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="may-cha-san.html" title="Máy chà sàn">
-                                                    Máy chà sàn
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="may-quet-rac.html" title="Máy quét rác">
-                                                    Máy quét rác
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="may-giat-tham.html" title="Máy giặt thảm">
-                                                    Máy giặt thảm
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="may-phun-ap-luc.html"
-                                                    title="Máy phun áp lực">
-                                                    Máy phun áp lực
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="xe-vat-nuoc-lau-nha.html"
-                                                    title="Xe vắt nước lau nhà">
-                                                    Xe vắt nước lau nhà
-                                                </a></li>
-                                        </ul>
-                                    </li>
+
                                     <li class="nav-item dropdown menu_item">
                                         <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
                                             href="tin-tuc.html" title="Tin tức">
                                             Tin tức
                                         </a>
                                         <ul class="nav dropdown-menu hide">
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="tin-tuc.html" title="Xem tất cả">
+                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
+                                                    href="tin-tuc.html" title="Xem tất cả">
                                                     Xem tất cả
                                                 </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="tin-cong-ty.html" title="Tin công ty">
+                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
+                                                    href="tin-cong-ty.html" title="Tin công ty">
                                                     Tin công ty
                                                 </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="tuyen-dung.html" title="Tuyển dụng">
+                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
+                                                    href="tuyen-dung.html" title="Tuyển dụng">
                                                     Tuyển dụng
                                                 </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="kinh-nghiem.html"
-                                                    title="Kinh nghiệm - Mẹo vặt">
+                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
+                                                    href="kinh-nghiem.html" title="Kinh nghiệm - Mẹo vặt">
                                                     Kinh nghiệm - Mẹo vặt
                                                 </a></li>
                                             <li class="nav-item menu_item"><a class="nav-link sub-link"
@@ -152,47 +118,14 @@
                                                 </a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item menu_item">
-                                        <a class="nav-link sub-link" data-toggle="" href="lien-he.html"
-                                            title="Liên hệ">
+                                    <li
+                                        class="nav-item menu_item {{ request()->is('lien-he') ? 'active' : '' }}">
+                                        <a class="nav-link sub-link" data-toggle=""
+                                            href="{{ route('client.contact.index') }}" title="Liên hệ">
                                             Liên hệ
                                         </a>
                                     </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
-                                    </li>
+
 
                             </div>
                         </nav>

@@ -183,16 +183,7 @@
     @endsection
 
     @section('js')
-        <script>
-            $(document).ready(function() {
-                $('#myTable').DataTable({
-                    order: [
-                        [0, 'desc']
-                    ],
-
-                });
-            });
-        </script>
+      
 
 
         {{-- update --}}
@@ -240,14 +231,5 @@
                 });
             });
         </script>
-        <script>
-            // $('#status').click(function(e) {
-            //     let op = $('#status option').val();
-
-            //     console.log(op);
-            //     e.preventDefault();
-
-
-            // })
-        </script>
+     
     @endsection

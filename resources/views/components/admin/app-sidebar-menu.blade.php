@@ -129,6 +129,57 @@
             <!--end:Menu content-->
         </div>
         <!-- module -->
+
+        <!--begin:DEpossti-->
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <!--begin:Menu link-->
+            <span class="menu-link">
+                <span class="menu-icon">
+                    {{-- begin::Svg Icon | path: icons/duotune/communication/com011.svg --}}
+                    <span class="svg-icon svg-icon-2">
+                        <i class="fa-brands fa-product-hunt"></i>
+                    </span>
+                    <!--end::Svg Icon-->
+                </span>
+                <span class="menu-title">
+                    <h5 style="color:gray">Thông tin liên hệ</h5>
+                </span>
+                <span class="menu-arrow"></span>
+            </span>
+            <!--end:Menu link-->
+            <!--begin:Menu sub-->
+            <div class="menu-sub menu-sub-accordion">
+
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('admin.contact-info.create') }}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Thông tin</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('admin.introduce.create') }}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Giới thiệu công ty</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+            </div>
+            <!--end:Menu sub-->
+        </div>
+        <!--end:DEpossti item-->
+
+
         <!--begin:Menu item-->
         <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
             <!--begin:Menu link-->
@@ -258,6 +309,7 @@
             <!--end:Menu sub-->
         </div>
         <!--end:DEpossti item-->
+
 
 
         <!-- module -->

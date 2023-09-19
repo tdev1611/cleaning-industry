@@ -70,106 +70,30 @@
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3">
-                        <p>TIN MỚI</p>
+                        <p>DỊCH VỤ</p>
                         <p class="head_footer"></p>
                         <ul>
-                            <li><a href="tin-tuc/cong-trinh-lau-kinh-toa-nha-trung-tam-hanh-chinh-binh-duong.html"
-                                    title="Công trình: Lau kính tòa nhà Trung tâm Hành chính Bình Dương">
-                                    Công trình: Lau kính tòa nhà Trung tâm Hành chính Bình Dương
-                                </a></li>
-                            <li><a href="tin-tuc/tap-the-ve-sinh-cong-nghiep-nam-sao-huong-ve-mien-trung.html"
-                                    title="Tập thể Vệ Sinh Công Nghiệp Năm Sao hướng về Miền Trung">
-                                    Tập thể Vệ Sinh Công Nghiệp Năm Sao hướng về Miền Trung
-                                </a></li>
-                            <li><a href="tin-tuc/hinh-thuc-thanh-toan-cong-ty-nam-sao.html"
-                                    title="Hình thức thanh toán công ty Năm Sao">
-                                    Hình thức thanh toán công ty Năm Sao
-                                </a></li>
-                            <li><a href="tin-tuc/chinh-sach-bao-mat-cong-ty-nam-sao.html"
-                                    title="Chính sách bảo mật công ty Năm Sao">
-                                    Chính sách bảo mật công ty Năm Sao
-                                </a></li>
-                            <li><a href="tin-tuc/tuyen-dung-nhan-vien-ve-sinh-cong-nghiep.html"
-                                    title="Tuyển dụng nhân viên Vệ Sinh Công Nghiệp tại TPHCM">
-                                    Tuyển dụng nhân viên Vệ Sinh Công Nghiệp tại TPHCM
-                                </a></li>
-                            <li><a href="tin-tuc/ve-sinh-ham-de-xe-toa-nha.html" title="Vệ sinh hầm để xe tòa nhà">
-                                    Vệ sinh hầm để xe tòa nhà
-                                </a></li>
-                            <li><a href="tin-tuc/ve-sinh-phan-tho-va-tinh-sau-xay-dung.html"
-                                    title="Vệ sinh phần thô và phần tinh sau xây dựng">
-                                    Vệ sinh phần thô và phần tinh sau xây dựng
-                                </a></li>
-                            <li><a href="dich-vu-ve-sinh-nha-may-xi-nghiep.html"
-                                    title="Dịch vụ vệ sinh nhà máy, xí nghiệp">
-                                    Dịch vụ vệ sinh nhà máy, xí nghiệp
-                                </a></li>
-                            <li><a href="tin-tuc/luat-lao-dong-lien-quan-den-nguoi-giup-viec.html"
-                                    title="Luật Lao động liên quan đến người giúp việc">
-                                    Luật Lao động liên quan đến người giúp việc
-                                </a></li>
+
+                            <x-client.footer-service />
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-3 col-lg-2">
-                        <p>DỊCH VỤ</p>
+                        <p>TIN MỚI</p>
                         <p class="head_footer"></p>
                         <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-                            <li itemprop="name"><a itemprop="url" href="tin-cong-ty.html" title="Tin Công Ty">
+                            <li itemprop="name">
+                                <a itemprop="url" href="tin-cong-ty.html" title="Tin Công Ty">
                                     Tin Công Ty
-                                </a></li>
-                            <li itemprop="name"><a itemprop="url" href="tuyen-dung.html" title="Tuyển Dụng">
-                                    Tuyển Dụng
-                                </a></li>
-                            <li itemprop="name"><a itemprop="url" href="tin-tuc/chinh-sach-bao-mat-cong-ty-nam-sao.html"
-                                    title="Chính sách bảo mật">
-                                    Chính sách bảo mật
-                                </a></li>
-                            <li itemprop="name"><a itemprop="url"
-                                    href="tin-tuc/hinh-thuc-thanh-toan-cong-ty-nam-sao.html"
-                                    title="Hình thức thanh toán">
-                                    Hình thức thanh toán
-                                </a></li>
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <p>THÔNG TIN LIÊN HỆ</p>
                         <p class="head_footer"></p>
                         <div class="footer_intro_bottom">
-                            <ul>
-                                <li>
-                                    CÔNG TY TNHH VỆ SINH CÔNG NGHIỆP NĂM SAO
-                                </li>
-                                <li>
-                                    <img class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic1.png"
-                                        alt="icon loader 1" data-pagespeed-url-hash="2013785254" />
-                                    33/110C Tô Ký, phường Tân Chánh Hiệp, Quận 12, TPHCM
-                                </li>
-                                <li><img class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic2.png"
-                                        alt="icon loader 2" data-pagespeed-url-hash="2013785254" />
-                                    028.3886 8899 - 0936 750 009
-                                </li>
-                                <li><img class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic3.png"
-                                        alt="icon loader 3" data-pagespeed-url-hash="2013785254" />
-                                    vesinhnamsao@gmail.com
-                                </li>
-                                <li>
-                                    <img class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/footer-ic4.png"
-                                        alt="icon loader 4" data-pagespeed-url-hash="2013785254" />
-                                    http://vesinhcongnghiep.com
-                                </li>
-                                <a href="https://www.dmca.com/Protection/Status.aspx?ID=19a709b7-2311-40b9-8a49-3521875aad73&amp;refurl=https://vesinhcongnghiep.com/"
-                                    target="_blank" rel="noopener nofollow"
-                                    title="Nội dung từ website này được đăng ký bản quyền DMCA. Không được sao chép khi chưa có sự cho phép của LPTech EC Co,.. ltd."
-                                    class="dmca-badge"><img class="lazy"
-                                        data-src="https://vesinhcongnghiep.com/themes/vscn-2020/assets/images/dmca-badge.png"
-                                        style="width:150px !important"
-                                        alt="Nội dung từ website này được đăng ký bản quyền DMCA. Không được sao chép khi chưa có sự cho phép của LPTech EC Co,.. ltd."
-                                        data-pagespeed-url-hash="2013785254"></a>
-                            </ul>
+                          <x-client.footer-contact-info />
                         </div>
                     </div>
                 </div>

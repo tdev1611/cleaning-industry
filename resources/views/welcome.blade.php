@@ -127,14 +127,22 @@
                         <div class="h-100 d-flex flex-column justify-content-center box-contact">
                             <div class="box-item">
                                 <p class="text-title text-black">Liên hệ</p>
-                                <p class="text ml-0"><b>Phone</b>: <a href="tel:0936750009">0936750009</a></p>
-                                <p class="text ml-0 mb-0"><b>Email</b>: <a
-                                        href="mailto:vesinhnamsao@gmail.com">vesinhnamsao@gmail.com</a></p>
+                                <p class="text ml-0"><b>Phone</b>:
+                                    <a href="">
+                                        {{ $contact_Info ? $contact_Info->phone : ''}}
+                                    </a>
+                                </p>
+                                <p class="text ml-0 mb-0"><b>Email</b>:
+                                    <a href="mailto: {{ $contact_Info ?? $contact_Info->email }}">
+                                        {{ $contact_Info ? $contact_Info->email : null }}
+                                    </a>
+                                </p>
                             </div>
                             <div class="box-line"></div>
                             <div class="box-item">
                                 <p class="text-title text-black">Địa chỉ</p>
-                                <p class="text ml-0 mb-0">33/110C Tô Ký, <br> phường Tân Chánh Hiệp, Quận 12, TPHCM
+                                <p class="text ml-0 mb-0">
+                                    {{ $contact_Info ? $contact_Info->address : null }}
                                 </p>
                             </div>
                         </div>
