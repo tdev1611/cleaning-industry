@@ -2,17 +2,22 @@
 
 namespace App\View\Components\Client;
 
- 
 use Illuminate\View\Component;
 
-class GoogleMap extends Component
+use App\Services\Client\ServiceService;
+
+class FormContact extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
- 
+    protected $service;
+    function __construct(ServiceService $service)
+    {
+        $this->service = $service;
+    }
 
     /**
      * Get the view / contents that represent the component.
@@ -21,9 +26,7 @@ class GoogleMap extends Component
      */
     public function render()
     {
-       
-      
-      
-        return view('components.client.google-map');
+        $services = $this->service->getAll();
+        return view('components.client.form-contact', compact('services'));
     }
 }

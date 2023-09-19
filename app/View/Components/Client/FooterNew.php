@@ -2,17 +2,16 @@
 
 namespace App\View\Components\Client;
 
- 
 use Illuminate\View\Component;
 
-class GoogleMap extends Component
+
+class FooterNew extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
- 
 
     /**
      * Get the view / contents that represent the component.
@@ -21,9 +20,7 @@ class GoogleMap extends Component
      */
     public function render()
     {
-       
-      
-      
-        return view('components.client.google-map');
+        
+        return view('components.client.footer-new');
     }
 }
