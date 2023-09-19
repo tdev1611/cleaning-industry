@@ -25,6 +25,9 @@ class ServiceController extends Controller
     function detail($slug)
     {
         $service = $this->service->detail($slug);
+        if (!$service) {
+            return abort(404);
+        }
         $services = $this->service->getService($slug);
         return view('client.services.detail', compact('service', 'services'));
     }
