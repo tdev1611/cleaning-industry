@@ -24,7 +24,8 @@ Route::get('/dich-vu/{slug}', [ServiceController::class, 'detail'])->name('clien
 
 
 // contact
-Route::post('/contact}', [ContactController::class, 'contact_post'])->name('client.contact.post');
+Route::get('/lien-he', [ContactController::class, 'index'])->name('client.contact.index');
+Route::post('/contact', [ContactController::class, 'contact_post'])->name('client.contact.post');
 
 
 

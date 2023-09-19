@@ -20,6 +20,13 @@ class ServiceService
         return $this->service->oldest('ordinal')->where('status', 1)->get();
     }
 
+    function getLimit()
+    {
+
+        return $this->service->latest()->where('status', 1)->limit(6)->get();
+    }
+
+
     function getService($slug)   //services different
     {
 
@@ -27,6 +34,7 @@ class ServiceService
     }
     function detail($slug)
     {
+     
         return $this->service->where('slug', $slug)->first();
     }
 }
