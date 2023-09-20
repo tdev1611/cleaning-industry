@@ -30,6 +30,7 @@
                     </ul>
                     <!--end::Breadcrumb-->
                 </div>
+                <a href="{{ route('admin.services.index') }}" class="btn btn-primary">Quay lại</a>
             </div>
             <!--end::Toolbar container-->
             {{-- component alert --}}

@@ -6,11 +6,12 @@
             text-decoration: none;
         }
 
-        #service_title h3 {
+        #service_title h5 {
+            margin-top: 10px;
             color: #000;
         }
 
-        #service_title h3:hover {
+        #service_title h5:hover {
             color: rgb(104, 100, 78);
 
         }
@@ -19,17 +20,8 @@
     <main class="content-area">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="owl-lazy d-block w-100"
-                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
-                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
-                </div>
-              
-                <div class="swiper-slide">
-                    <img class="owl-lazy d-block w-100"
-                        src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-1.png"
-                        alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
-                </div>
+                {{-- banner --}}
+                <x-client.banner />
 
             </div>
             <div class="swiper-button-next"></div>
@@ -51,26 +43,7 @@
                             alt="Dịch vụ vệ sinh công nghiệp năm sao đa dạng, làm sạch tối ưu sau 1 lần sử dụng" />
                     </a>
                 </div>
-                <div class="item ">
-                    <a href="#">
-                        <img class="owl-lazy d-block w-100"
-                            data-src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-ve-sinh-cong-nghiep-2.png"
-                            alt="Năm sao giúp bạn làm sạch mọi không gian với dịch vụ vệ sinh chuyên nghiệp" />
-                    </a>
-                </div>
-                <div class="item ">
-                    <a href="#">
-                        <img class="owl-lazy d-block w-100"
-                            data-src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-lau-kinh-3.png"
-                            alt="Dịch vụ lau kính đánh bay vết bẩn mọi công trình" />
-                    </a>
-                </div>
-                <div class="item "><a href="#">
-                        <img class="owl-lazy d-block w-100"
-                            data-src="https://vesinhcongnghiep.com/uploads/files/2022/04/28/dich-vu-giat-ghe-sofa-4.png"
-                            alt="Dịch vụ giặt thảm, giặt ghế sofa và giặt ghế văn phòng chất lượng đảm bảo" />
-                    </a>
-                </div>
+             
             </div>
         </div> --}}
 
@@ -105,7 +78,7 @@
                                 <p class="text-title text-black">Liên hệ</p>
                                 <p class="text ml-0"><b>Phone</b>:
                                     <a href="">
-                                        {{ $contact_Info ? $contact_Info->phone : ''}}
+                                        {{ $contact_Info ? $contact_Info->phone : '' }}
                                     </a>
                                 </p>
                                 <p class="text ml-0 mb-0"><b>Email</b>:
@@ -184,15 +157,16 @@
                             <div class="d-flex flex-column h-100 overflow-hidden service_items blogs_m">
                                 <div class="blogs_i">
                                     <a href="{{ route('client.services.detail', $service->slug) }}">
-                                        <img class="lazy" data-src="{{ url($service->image) }}"
-                                            title="{{ $service->title }}" src=" " alt="{{ $service->title }}">
+                                        {{-- data-src="{{ url($service->image) }}" --}}
+                                        <img class="lazy" src="{{ url($service->image) }}" title="{{ $service->title }}"
+                                            src=" " alt="{{ $service->title }}">
                                     </a>
                                 </div>
                                 <a id="service_title" class="mb-auto"
                                     href="{{ route('client.services.detail', $service->slug) }}">
-                                    <h3 class="text-center">
+                                    <h5 class="text-center">
                                         {{ $service->title }}
-                                    </h3>
+                                    </h5>
                                 </a>
                                 <p class="webkit-box-3 box-intro">
                                     {{ Str::words($service->desc, 22, '...') }}
@@ -220,6 +194,7 @@
             </div>
             </div>
         </section>
+
         <section class="section-my-team">
             <div class="container">
                 <div class="text-center box-text">

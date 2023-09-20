@@ -83,7 +83,7 @@
                     <!--end::Svg Icon-->
                 </span>
                 <span class="menu-title">
-                    <h5 style="color:gray">Cài đặt thông báo</h5>
+                    <h5 style="color:gray">Cài đặt Banner</h5>
                 </span>
                 <span class="menu-arrow"></span>
             </span>
@@ -93,11 +93,29 @@
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="">
+                    <a class="menu-link" href="{{ route('admin.banner.create') }}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
-                        <span class="menu-title">Danh sách thông báo </span>
+                        <span class="menu-title">Banner</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('admin.image-banner.create') }}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title"> Thêm ảnh banner </span>
+                    </a>
+                    <a class="menu-link" href="{{ route('admin.image-banner.index') }}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Danh sách ảnh banner </span>
                     </a>
                     <!--end:Menu link-->
                 </div>

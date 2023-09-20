@@ -27,7 +27,9 @@
                                         </a>
                                     </li>
                                     <li class="nav-item menu_item">
-                                        <a class="nav-link sub-link" data-toggle="" href="{{ route('client.introduce.index',$introduce->slug) }}" title="Giới thiệu">
+                                        <a class="nav-link sub-link" data-toggle=""
+                                            href="{{ route('client.introduce.index', $introduce->slug) }}"
+                                            title="Giới thiệu">
                                             Giới thiệu
                                         </a>
                                     </li>
@@ -56,33 +58,20 @@
 
                                         </ul>
                                     </li>
+                                    {{--                                     
                                     <li class="nav-item dropdown menu_item">
                                         <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
                                             href="bang-gia.html" title="Bảng giá">
                                             Bảng giá
                                         </a>
                                         <ul class="nav dropdown-menu hide">
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="bang-gia/bang-gia-dich-vu-ve-sinh-nha-pho-sau-xay-dung-khu-vuc-tphcm.html"
-                                                    title="Bảng giá dịch vụ vệ sinh nhà phố">
-                                                    Bảng giá dịch vụ vệ sinh nhà phố
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="bang-gia/bang-gia-ve-sinh-can-ho-nha-chung-cu-sau-xay-dung-tai-tphcm.html"
-                                                    title="Bảng giá vệ sinh căn hộ">
-                                                    Bảng giá vệ sinh căn hộ
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="bang-gia/bang-gia-giat-tham-van-phong-tham-khao-nam.html"
-                                                    title="Bảng giá giặt thảm">
-                                                    Bảng giá giặt thảm
-                                                </a></li>
+                                     
                                             <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
                                                     href="bang-gia.html" title="Bảng giá khác">
                                                     Bảng giá khác
                                                 </a></li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
                                     <li class="nav-item dropdown menu_item">
                                         <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
@@ -106,13 +95,12 @@
                                                     href="kinh-nghiem.html" title="Kinh nghiệm - Mẹo vặt">
                                                     Kinh nghiệm - Mẹo vặt
                                                 </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="ve-sinh-cong-nghiep.html"
-                                                    title="Tin chuyên ngành">
+                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
+                                                    href="ve-sinh-cong-nghiep.html" title="Tin chuyên ngành">
                                                     Tin chuyên ngành
                                                 </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link"
-                                                    data-toggle="" href="tin-lau-kinh.html" title="Tin tức lau kính">
+                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
+                                                    href="tin-lau-kinh.html" title="Tin tức lau kính">
                                                     Tin tức lau kính
                                                 </a></li>
                                         </ul>

@@ -17,7 +17,7 @@ class ServiceService
 
     function getAll()
     {
-        return $this->service->oldest('ordinal')->where('status', 1)->get();
+        return $this->service->oldest('ordinal')->where('status', 1)->limit(12)->get();
     }
 
     function getLimit()

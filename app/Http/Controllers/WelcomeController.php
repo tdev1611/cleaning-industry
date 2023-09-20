@@ -20,6 +20,6 @@ class WelcomeController extends Controller
     {
         $services = $this->service->getAll();
         $contact_Info = $this->contact_Info->first();
-        return view('welcome', compact('services','contact_Info'));
+        return view('welcome', compact('services', 'contact_Info'));
     }
 }
