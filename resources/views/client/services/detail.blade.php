@@ -1,4 +1,5 @@
 @extends('client.layout')
+@section('title',$service->title)
 @section('content')
     <div class="container body articleDetail">
         <div class="row mb-5">

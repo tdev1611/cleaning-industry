@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ContactInfoController;
 use App\Http\Controllers\Admin\IntroduceController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\ImageBannerController;
+use App\Http\Controllers\Admin\SettingController;
 
 
 
@@ -15,7 +16,8 @@ use App\Http\Controllers\Admin\ImageBannerController;
 Route::get('/', function () {
 })->name('admin.home');
 
-
+// setting
+Route::resource('setting', SettingController::class, ['as' => 'admin']);
 
 // banner
 Route::resource('banner', BannerController::class, ['as' => 'admin']);

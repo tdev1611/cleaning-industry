@@ -1,4 +1,5 @@
 @extends('client.layout')
+@section('title','Liên hệ')
 @section('content')
     <div class="container body mb-5">
         <div class="row bodyLL">

@@ -3,6 +3,7 @@
 namespace App\View\Components\Client;
 
 use Illuminate\View\Component;
+use App\Models\SettingWeb;
 
 class HeadMeta extends Component
 {
@@ -11,9 +12,10 @@ class HeadMeta extends Component
      *
      * @return void
      */
-    public function __construct()
+    private $setting;
+    public function __construct(SettingWeb $setting)
     {
-        //
+        $this->setting = $setting;
     }
 
     /**
@@ -23,6 +25,7 @@ class HeadMeta extends Component
      */
     public function render()
     {
-        return view('components.client.head-meta');
+        $setting = $this->setting->first();
+        return view('components.client.head-meta', compact('setting'));
     }
 }

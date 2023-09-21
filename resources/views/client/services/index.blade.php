@@ -1,4 +1,5 @@
 @extends('client.layout')
+@section('title', 'Dịch vụ')
 @section('content')
     <main>
         <div class="service">
@@ -13,7 +14,7 @@
                                 <div class="list_news_item_img blogs_i">
                                     <a :href="servicesDetailRoute.replace(':slug', item.slug)">
                                         <img class="lazy" :data-src="'{{ url('') }}' + '/' + item.image"
-                                           :src="'{{ url('') }}' + '/' + item.image"  :alt="item.title">
+                                            :src="'{{ url('') }}' + '/' + item.image" :alt="item.title">
                                     </a>
                                 </div>
                                 <a class="mb-auto" :href="servicesDetailRoute.replace(':slug', item.slug)">

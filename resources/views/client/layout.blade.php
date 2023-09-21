@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     {{-- <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi-vn" lang="vi-vn"> --}}
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Vệ Sinh Công Nghiệp Năm Sao - Dịch Vụ Vệ Sinh Uy Tín TPHCM</title>
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes" />
     {{-- meta --}}
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('client/style/css/slide.css') }}">
     {{-- logo --}}
     <x-client.head-logo />
+  
     {{-- logo --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
