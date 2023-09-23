@@ -34,7 +34,7 @@ class ServiceService
     }
     function detail($slug)
     {
-     
+
         return $this->service->where('slug', $slug)->first();
     }
 }

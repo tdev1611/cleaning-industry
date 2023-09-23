@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\Client\ServiceService;
 use App\Models\Contact_Info;
+use App\Models\Procedure;
 
 class WelcomeController extends Controller
 {
@@ -20,6 +21,7 @@ class WelcomeController extends Controller
     {
         $services = $this->service->getAll();
         $contact_Info = $this->contact_Info->first();
-        return view('welcome', compact('services', 'contact_Info'));
+        $procedures = Procedure::where('status', 1)->oldest('ordinal')->get();
+        return view('welcome', compact('services', 'contact_Info', 'procedures'));
     }
 }

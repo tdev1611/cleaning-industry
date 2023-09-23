@@ -188,8 +188,9 @@
                 </div>
             </div>
             <div class="text-center mt-2">
-                <p class="text_link">Đưa ra các biện pháp vệ sinh chất lượng cao.
-                    <a class="category_link" href="dich-vu.html">Hãy xem thêm các bài viết của chúng tôi!</a>
+                <p class="text_link">
+                    <a class="category_link" href="{{ route('client.services.index') }}">Hãy xem thêm các bài viết của
+                        chúng tôi!</a>
                 </p>
             </div>
             </div>
@@ -244,56 +245,31 @@
         <section class="section-process">
             <div class="container">
                 <div class="text-center">
-                    <h2>QUY TRÌNH VỆ SINH CÔNG NGHIỆP TẠI <span class="text-black">NĂM SAO</span></h2>
-                    <p class="mb-0 mx-auto process-intro">Quy trình vệ sinh công nghiệp 5 bước tại Năm Sao tỉ mỉ
+                    <h2>QUY TRÌNH VỆ SINH CÔNG NGHIỆP </h2>
+                    <p class="mb-0 mx-auto process-intro">Quy trình vệ sinh công nghiệp tỉ mỉ
                         từng bước cụ
-                        thể, đảm bảo mang đến cho công trình một diện mạo mới, sạch sẽ và an toàn.</p>
+                        thể, đảm bảo mang đến cho công trình một diện mạo mới, sạch sẽ và an toàn.
+                    </p>
                 </div>
                 <div class="d-flex flex-wrap justify-content-center list-item-process">
-                    <div class="bg-white text-center item-process" id="step1">
-                        <div class="bg-white d-flex justify-content-center align-items-center item-number">
-                            <span class="d-flex justify-content-center align-items-center">1</span>
+                    @foreach ($procedures as $procedure)
+                        <div class="bg-white text-center item-process" id="step1">
+                            <div class="bg-white d-flex justify-content-center align-items-center item-number">
+                                <span class="d-flex justify-content-center align-items-center">
+                                    {{ $procedure->ordinal }}
+                                </span>
+                            </div>
+                            <h3>{{ $procedure->title }}</h3>
+                            <p class="text-justify mb-0  item-intro">
+                                {{ $procedure->desc }}
+                            </p>
                         </div>
-                        <h3>Tiếp nhận thông tin yêu cầu</h3>
-                        <p class="text-justify mb-0  item-intro">Tiếp nhận yêu cầu từ khách hàng, Năm Sao sẽ liên
-                            hệ và cử nhân
-                            viên đến khảo sát thực tế và đưa ra báo giá chi tiết dịch vụ.</p>
-                    </div>
-                    <div class="bg-white text-center item-process" id="step2">
-                        <div class="bg-white d-flex justify-content-center align-items-center item-number"><span
-                                class="d-flex justify-content-center align-items-center">2</span></div>
-                        <h3>Ký kết hợp đồng làm việc</h3>
-                        <p class="text-justify mb-0  item-intro">Khi hai bên đã thống nhất về chi phí, tiến trình
-                            làm việc, nội
-                            dung hợp đồng vệ sinh công nghiệp, … sẽ tiến tới ký kết hợp đồng.</p>
-                    </div>
-                    <div class="bg-white text-center item-process" id="step3">
-                        <div class="bg-white d-flex justify-content-center align-items-center item-number"><span
-                                class="d-flex justify-content-center align-items-center">3</span></div>
-                        <h3>Thực hiện vệ sinh công nghiệp</h3>
-                        <p class="text-justify mb-0  item-intro">Đội ngủ nhân viên vệ sinh sẽ đến làm việc, cam kết
-                            tuân thủ về
-                            thời gian, địa điểm, … và các quy định tại nơi làm việc của quý khách.</p>
-                    </div>
-                    <div class="bg-white text-center item-process" id="step4">
-                        <div class="bg-white d-flex justify-content-center align-items-center item-number"><span
-                                class="d-flex justify-content-center align-items-center">4</span></div>
-                        <h3>Nghiệm thu sau khi vệ sinh</h3>
-                        <p class="text-justify mb-0  item-intro">Sau khi hoàn thiện dịch vụ vệ sinh, dọn dẹp sạch
-                            sẽ. Năm Sao
-                            thông báo quý khách hàng đến nghiệm thu, và kiểm tra lại lần nữa.</p>
-                    </div>
-                    <div class="bg-white text-center item-process" id="step5">
-                        <div class="bg-white d-flex justify-content-center align-items-center item-number"><span
-                                class="d-flex justify-content-center align-items-center">5</span></div>
-                        <h3>Tiến hành bàn giao dự án</h3>
-                        <p class="text-justify mb-0  item-intro">Khách hàng hài lòng và không có yêu cầu gì thêm
-                            thì chúng tôi sẽ
-                            bàn giao, nhận thanh toán, xuất hóa đơn đầy đủ và kết thúc hợp đồng.</p>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </section>
+
         <section class="list-news">
             <div class="container">
                 <div class="row">

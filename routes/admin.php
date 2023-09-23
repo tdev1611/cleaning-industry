@@ -9,9 +9,8 @@ use App\Http\Controllers\Admin\IntroduceController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\ImageBannerController;
 use App\Http\Controllers\Admin\SettingController;
-
-
-
+use App\Http\Controllers\Admin\ProcedureController;
+ 
 
 Route::get('/', function () {
 })->name('admin.home');
@@ -47,6 +46,11 @@ Route::get('contacts/delete/{id}', [ContactController::class, 'delete'])->name('
 
 // contacts-info
 Route::resource('contact-info', ContactInfoController::class, ['as' => 'admin']);
+
+
+// procedures
+Route::resource('procedures', ProcedureController::class, ['as' => 'admin']);
+Route::get('procedures/delete/{id}', [ProcedureController::class, 'delete'])->name('admin.procedures.delete');
 
 // introduce
 Route::resource('introduce', IntroduceController::class, ['as' => 'admin']);
