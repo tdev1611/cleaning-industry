@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="box-text-top">
-                            <h1 class="text-black">Vệ Sinh Công Nghiệp Năm Sao - Dịch Vụ Vệ Sinh Uy Tín TPHCM</h1>
+                            <h1 class="text-black">Vệ Sinh Công Nghiệp </h1>
                             <p class="text-intros webkit-box-3">Công ty Vệ Sinh Công Nghiệp Năm Sao - Chuyên cung
                                 cấp dịch vụ vệ
                                 sinh tại TPHCM và các tỉnh thành lân cận với đội ngũ chuyên viên kinh nghiệm, tận

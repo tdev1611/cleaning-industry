@@ -26,13 +26,17 @@
                                             Trang chủ
                                         </a>
                                     </li>
-                                    <li class="nav-item menu_item">
-                                        <a class="nav-link sub-link" data-toggle=""
-                                            href="{{ route('client.introduce.index', $introduce->slug) }}"
-                                            title="Giới thiệu">
-                                            Giới thiệu
-                                        </a>
-                                    </li>
+                                    @if (isset($introduce))
+                                        <li
+                                            class="nav-item menu_item  {{ preg_match('/^gioi-thieu\b/', request()->path()) ? 'active' : '' }}">
+                                            <a class="nav-link sub-link" data-toggle=""
+                                                href="{{ route('client.introduce.index', $introduce->slug) }}"
+                                                title="Giới thiệu">
+                                                Giới thiệu
+                                            </a>
+                                        </li>
+                                    @endif
+
                                     <li
                                         class="nav-item dropdown menu_item  {{ preg_match('/^dich-vu\b/', request()->path()) ? 'active' : '' }}">
                                         <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
@@ -75,34 +79,27 @@
 
                                     <li class="nav-item dropdown menu_item">
                                         <a class="dropdown-item dropdown-toggle nav-link" data-toggle="dropdown"
-                                            href="tin-tuc.html" title="Tin tức">
+                                            href="" title="Tin tức">
                                             Tin tức
                                         </a>
                                         <ul class="nav dropdown-menu hide">
                                             <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="tin-tuc.html" title="Xem tất cả">
+                                                    href="" title="Xem tất cả">
                                                     Xem tất cả
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="tin-cong-ty.html" title="Tin công ty">
-                                                    Tin công ty
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="tuyen-dung.html" title="Tuyển dụng">
-                                                    Tuyển dụng
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="kinh-nghiem.html" title="Kinh nghiệm - Mẹo vặt">
-                                                    Kinh nghiệm - Mẹo vặt
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="ve-sinh-cong-nghiep.html" title="Tin chuyên ngành">
-                                                    Tin chuyên ngành
-                                                </a></li>
-                                            <li class="nav-item menu_item"><a class="nav-link sub-link" data-toggle=""
-                                                    href="tin-lau-kinh.html" title="Tin tức lau kính">
-                                                    Tin tức lau kính
-                                                </a></li>
+                                                </a>
+                                            </li>
+                                            @foreach ($categories as $category)
+                                                <li class="nav-item menu_item">
+                                                    <a class="nav-link sub-link" data-toggle=""
+                                                        href="{{ route('client.news.index', $category->slug) }}"
+                                                        title="{{ $category->title }}">
+                                                        {{ $category->title }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+
+
+
                                         </ul>
                                     </li>
                                     <li class="nav-item menu_item {{ request()->is('lien-he') ? 'active' : '' }}">

@@ -1,6 +1,21 @@
 @extends('client.layout')
 @section('title', 'Dịch vụ')
 @section('content')
+<style>
+    .title {
+        color: #000;
+        font-size: 25px
+    }
+
+    a:hover {
+        text-decoration: none;
+
+    }
+
+    a:hover .title {
+        color: red;
+    }
+</style>
     <main>
         <div class="service">
             <div class="service_title">
@@ -26,9 +41,8 @@
                                 <div class="">
                                     <a class="btn__link blog_news_link"
                                         :href="servicesDetailRoute.replace(':slug', item.slug)">
-                                        <span>Chi Tiết</span>
-                                        <i class="flaticon-right-arrow icon-arrow-right">
-                                        </i>
+                                        <span style="color:#000; font-weight:600">Chi Tiết</span>
+                                      
                                     </a>
                                 </div>
                             </div>

@@ -23,8 +23,8 @@ class BodyHeader extends Component
     public function render()
     {
         $services = $this->headerNavService->getService();
-
-        $introduce = $this->headerNavService->getSlug();
-        return view('components.client.body-header', compact('services','introduce'));
+        $categories = $this->headerNavService->getCategory();
+        $introduce = $this->headerNavService->getIntro();
+        return view('components.client.body-header', compact('services', 'introduce', 'categories'));
     }
 }

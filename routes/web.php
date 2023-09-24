@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Client\ServiceController;
+use App\Http\Controllers\Client\NewsController;
 use App\Http\Controllers\Client\ContactController;
 use App\Http\Controllers\Client\IntroduceController;
 /*
@@ -31,10 +32,22 @@ Route::get('/gioi-thieu/{id}', [IntroduceController::class, 'index'])->name('cli
 Route::get('/dich-vu/', [ServiceController::class, 'index'])->name('client.services.index');
 Route::get('/dich-vu/{slug}', [ServiceController::class, 'detail'])->name('client.services.detail');
 
-
 // contact
 Route::get('/lien-he', [ContactController::class, 'index'])->name('client.contact.index');
 Route::post('/contact', [ContactController::class, 'contact_post'])->name('client.contact.post');
+
+
+
+// news
+Route::get('/{slug}', [NewsController::class, 'index'])->name('client.news.index');
+Route::get('/tin-tuc/{slug}', [NewsController::class, 'detail'])->name('client.news.detail');
+
+
+
+
+
+
+
 
 
 

@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\ImageBannerController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\ProcedureController;
+use App\Http\Controllers\Admin\CategoryNewController;
+use App\Http\Controllers\Admin\NewController;
  
 
 Route::get('/', function () {
@@ -37,6 +39,17 @@ Route::resource('services', ServiceController::class, ['as' => 'admin']);
 Route::get('services/delete/{id}', [ServiceController::class, 'delete'])->name('admin.services.delete');
 
 
+// category-news
+Route::resource('categories-new', CategoryNewController::class, ['as' => 'admin']);
+Route::get('categories-new/delete/{id}', [CategoryNewController::class, 'delete'])->name('admin.categories-new.delete');
+
+
+// news
+
+Route::resource('news', NewController::class, ['as' => 'admin']);
+Route::get('news/delete/{id}', [NewController::class, 'delete'])->name('admin.news.delete');
+
+
 
 
 // contacts
@@ -51,6 +64,10 @@ Route::resource('contact-info', ContactInfoController::class, ['as' => 'admin'])
 // procedures
 Route::resource('procedures', ProcedureController::class, ['as' => 'admin']);
 Route::get('procedures/delete/{id}', [ProcedureController::class, 'delete'])->name('admin.procedures.delete');
+
+
+
+
 
 // introduce
 Route::resource('introduce', IntroduceController::class, ['as' => 'admin']);
