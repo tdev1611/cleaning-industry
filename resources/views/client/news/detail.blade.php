@@ -36,24 +36,7 @@
                             TIN TỨC MỚI
                         </div>
                         <article class="s-sideNavArticle">
-                            <div class="box_list_news">
-                                <img class="lazy " src="../themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                    data-src="https://vesinhcongnghiep.com/uploads/files/2023/04/14/thumbs/May-nuoc-nong-1-1--105x95.png"
-                                    alt="" />
-                                <h3 class="title">
-                                    <a href="phan-biet-cac-loai-may-nuoc-nong-va-cach-chon-mua-san-pham-phu-hop.html">
-                                        Phân biệt các loại máy nước nóng và cách chọn mua sản phẩm phù hợp
-                                    </a>
-                                </h3>
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <i class="fa-solid fa-calendar-days"></i>
-
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <x-client.latest-news />
                         </article>
                     </nav>
                     <nav class="s-sideNav mt-5">
@@ -61,16 +44,7 @@
                         <div class="s-sideNavName">
                             DANH MỤC TIN TỨC
                         </div>
-                        <ul class="links categorys_links">
-                            <li class="d-flex justify-content-between">
-                                <a href="../tin-cong-ty.html">
-                                    Tin Công Ty
-                                </a>
-                                <a href="../tin-cong-ty.html"><i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </li>
-
-                        </ul>
+                        <x-client.category-new />
                     </nav>
                     {{-- <nav class="s-sideNav mt-5">
                             <div class="advertise-slider-detail owl-carousel owl-theme">
@@ -87,37 +61,37 @@
         </div>
         <div class="mt-5 text-center title_main">
             <h2>CÁC TIN TỨC <span style="text-transform: uppercase">
-                    {{ $new->title }}
+                    {{ $category->title }}
                 </span>
             </h2>
         </div>
 
-        {{-- <div class="row ">
-            @forelse ($services as $service)
+        <div class="row ">
+            @forelse ($category->newLimit as $item)
                 <div class="col-md-6 col-lg-4 pl-1 pr-1">
                     <div class="tips-main media">
                         <div class="tips-img">
-                            <a href="{{ route('client.services.detail', $service->slug) }}">
-                                <img class="lazy" src="{{ url($service->image) }}" alt="{{ $service->title }}" />
+                            <a href="{{ route('client.news.detail', $item->slug) }}">
+                                <img style="height: 100px; width: 100px;" class="lazy"
+                                    src="{{ url($item->image) }}" alt="{{ $item->title }}" />
                             </a>
                         </div>
-                        <div class="tips-content w-100"><a
-                                href="bong-den-led-cong-nghe-tiet-kiem-nang-luong-va-lau-doi.html">
-                                <h3 class="webkit-box-2 title">{{ $service->title }}</h3>
+                        <div class="tips-content w-100"><a href="{{ route('client.news.detail', $item->slug) }}">
+                                <h3 class="webkit-box-2 title">{{ $item->title }}</h3>
                             </a>
                             <p class="webkit-box-2 content">
-                                {{ Str::words($service->desc, 18, '...') }}
+                                {!! Str::words($item->content, 18, '...') !!}
                             </p>
                         </div>
                     </div>
                 </div>
             @empty
-                Chưa có các bài viết về dịch vụ
+                Chưa có các bài viết tin tức <b><i> {{ $category->title }}</i></b>
             @endforelse
 
 
 
-        </div> --}}
+        </div>
 
     </div>
 @endsection

@@ -53,23 +53,17 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="box-text-top">
-                            <h1 class="text-black">Vệ Sinh Công Nghiệp </h1>
-                            <p class="text-intros webkit-box-3">Công ty Vệ Sinh Công Nghiệp Năm Sao - Chuyên cung
-                                cấp dịch vụ vệ
-                                sinh tại TPHCM và các tỉnh thành lân cận với đội ngũ chuyên viên kinh nghiệm, tận
-                                tâm, hệ thống chuyên
-                                nghiệp, cùng giá cả phù hợp. Năm Sao tự tin luôn đem đến cho khách hàng những trải
-                                nghiệm tốt nhất
-                                cùng kết quả bàn giao sau dịch vụ tuyệt vời. Trân trọng kính chúc quý khách hàng vui
-                                vẻ, hạnh phúc,
-                                thành công. Vệ Sinh Công Nghiệp bao gồm các dịch vụ chi tiết như sau: vệ sinh nhà
-                                cửa, vệ sinh văn
-                                phòng, vệ sinh nhà xưởng</p>
-                            <a href="gioi-thieu/ve-sinh-cong-nghiep-nam-sao.html"
-                                class="d-inline-flex justify-content-between align-items-center btn btn-primary">Xem Thêm
-                                <span class="d-inline-flex justify-content-center align-items-center box-icon">
-                                    <i class="d-flex lp-arrow-right"></i>
+                            <h1 class="text-black">Vệ Sinh Sóng Xanh </h1>
+                            <p class="text-intros webkit-box-3">
+
+                                {!! Str::words($Introduce->service, 102, '...') !!}
+                            </p>
+                            <a href="{{ route('client.introduce.index',$Introduce->id) }}"
+                                class="d-inline-flex justify-content-between align-items-center btn btn-primary">
+                                Xem Thêm <span class="d-inline-flex justify-content-center align-items-center box-icon">
+                                    {{-- <i class="d-flex lp-arrow-right"></i> --}}
                                 </span></a>
+
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -143,10 +137,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center title_main">
-                            <h2>DỊCH VỤ VỆ SINH CÔNG NGHIỆP NỔI BẬT CỦA <span class="text-red">NĂM SAO</span></h2>
-                            <p>Công ty Dịch Vụ Vệ Sinh Năm Sao có đa dạng các dịch vụ vệ sinh chất lượng, uy tín, chuyên
-                                nghiệp, giá
-                                tốt tại tphcm và các tỉnh thành khác như Hà Nội, Đà Nẵng và Cần Thơ</p>
+                            <h2>DỊCH VỤ VỆ SINH SÓNG XANH </h2>
+                            <p>Công ty Dịch Vụ Vệ Sinh có đa dạng các dịch vụ vệ sinh chất lượng, uy tín, chuyên
+                                nghiệp, ...</p>
                         </div>
                     </div>
                 </div>
@@ -199,7 +192,7 @@
         <section class="section-my-team">
             <div class="container">
                 <div class="text-center box-text">
-                    <h2 class="text-black">ĐỘI VỆ SINH CÔNG NGHIỆP </h2>
+                    <h2 class="text-black">ĐỘI VỆ SINH SÓNG XANH </h2>
                     <div class="reaction justify-content-center" itemscope itemtype="https://schema.org/CreativeWorkSeries">
 
 
@@ -209,13 +202,7 @@
                             <meta itemprop="ratingCount" content="106">
                         </div>
                     </div>
-                    <p>Một trong những yếu tố làm nên uy tín và chất lượng dịch vụ Năm Sao chính là đội ngũ nhân
-                        viên chuyên
-                        nghiệp. Hiện tại, chúng tôi có 10 đội nhóm, có kinh nghiệm thực thi dự án trên nhiều khu vực
-                        khác nhau,
-                        đảm bảo làm hài lòng những khách hàng khó tính nhất. Tất cả nhân viên trong đội vệ sinh công
-                        nghiệp được
-                        đào tạo bài bản, chuyên sâu và luôn làm việc với phương châm</p>
+                    <p>Một trong những yếu tố làm nên uy tín và chất lượng dịch vụ ,...</p>
                     <p class="text-description mb-0">“TRUNG THỰC - CHĂM CHỈ - TẬN TÂM -TẬN LỰC”</p>
                 </div>
                 <table class="table table-bordered table-hover">
@@ -286,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="service">
+                <div class="row" id="news">
                     <div class="col-md-6 col-lg-4 mb-4" v-for="(item, index) in items" :key="index">
                         <div class="h-100 d-flex flex-column justify-content-between list-news_items blogs_m">
                             <div class="list_news_item_img blogs_i">
@@ -303,7 +290,8 @@
                                 </h3>
                             </a>
                             <p class="webkit-box-3 box-intro-news">
-                                @{{ formatDescription[index] }}
+                                <span v-html="formatDescription[index]"></span>
+                                <span>...</span>
                             </p>
                             <div class="">
                                 <a class="btn__link blog_news_link " id="service_title"
@@ -321,33 +309,58 @@
         <section class="section-faqs">
             <div class="container">
                 <div class="text-center">
-                    <h2>CÂU HỎI THƯỜNG GẶP VỀ DỊCH VỤ VỆ SINH CÔNG NGHIỆP TPHCM</h2>
-                    <p>Với các câu hỏi về đơn giá vệ sinh công nghiệp, quý bạn đọc có thể tham khảo bên phần bảng
-                        báo giá của
-                        chúng tôi trên thanh Menu của website theo từng loại hình cụ thể hoặc nhắn tin cho chúng tôi
-                        để được khảo
-                        sát và báo giá chi tiết nhé!</p>
+                    <h2>CÂU HỎI THƯỜNG GẶP VỀ DỊCH VỤ VỆ SINH SÓNG XANH</h2>
+                    <p>Với các câu hỏi về đơn giá vệ ,...!</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="bg-white box-item-faqs">
                             <input class="d-none toggle" type="checkbox" id="question1">
                             <label for="question1" class="form-label-question">
-                                <h3 class="mb-0 annwer">Vệ sinh công nghiệp là gì? Thông tin cần biết khi thuê dịch
-                                    vụ vệ sinh</h3>
+                                <h3 class="mb-0 annwer">Câu hỏi 1</h3>
                             </label>
                             <div class="box-question-body">
-                                <p class="mb-0">Vệ sinh công nghiệp là một loại hình dịch vụ được cung cấp bởi
-                                    các công ty vệ sinh có
-                                    đội ngũ nhân viên và máy móc hiện đại. Dịch vụ vệ sinh công nghiệp thường thường
-                                    phù hợp với các cơ
-                                    sở kinh doanh, doanh nghiệp, tòa nhà văn phòng, … cần vệ sinh khu vực lớn, phức
-                                    tạp, có chuyên môn
-                                    hoặc đòi hỏi nhiều trang thiết bị bảo hộ lao động như lau kính nhà cao tầng.</p>
+                                <p class="mb-0"> Trả lời câu hỏi 1.</p>
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-lg-6">
+                        <div class="bg-white box-item-faqs">
+                            <input class="d-none toggle" type="checkbox" id="question2">
+                            <label for="question2" class="form-label-question">
+                                <h3 class="mb-0 annwer">Câu hỏi 2</h3>
+                            </label>
+                            <div class="box-question-body">
+                                <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                                    necessitatibus?.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white box-item-faqs">
+                            <input class="d-none toggle" type="checkbox" id="question3">
+                            <label for="question3" class="form-label-question">
+                                <h3 class="mb-0 annwer">Câu hỏi 3</h3>
+                            </label>
+                            <div class="box-question-body">
+                                <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ex?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white box-item-faqs">
+                            <input class="d-none toggle" type="checkbox" id="question4">
+                            <label for="question4" class="form-label-question">
+                                <h3 class="mb-0 annwer">Câu hỏi 1</h3>
+                            </label>
+                            <div class="box-question-body">
+                                <p class="mb-0"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quibusdam
+                                    est qui veritatis velit exercitationem obcaecati, distinctio illum voluptatem facere..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             {{-- <span class="box-circle box-circle-1"></span> --}}
@@ -358,80 +371,46 @@
 
         <section class="section-carousel-contruction">
             <div class="container-fluid">
-                <h2 class="text-center">HÌNH ẢNH CÔNG TRÌNH VỆ SINH CÔNG NGHIỆP TPHCM</h2>
+                <h2 class="text-center">HÌNH ẢNH VỆ SINH CÔNG TRÌNH </h2>
                 <div class="slick-contruction">
+
                     <div class="item-img">
-                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-5-500x350-2.jpg"
-                            data-fancybox="gallery" id="single_image1"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-5-500x350-2.jpg"
+                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                            data-fancybox="gallery" id="single_image16">
+                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                                alt="" />
+                        </a>
+                    </div>
+                    <div class="item-img">
+                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                            data-fancybox="gallery" id="single_image16">
+                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
                                 alt="" /></a>
                     </div>
                     <div class="item-img">
-                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-10-500x350-2.jpg"
-                            data-fancybox="gallery" id="single_image2">
-                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-10-500x350-2.jpg"
-                                alt="" />
-                        </a>
+                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                            data-fancybox="gallery" id="single_image16">
+                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                                alt="" /></a>
                     </div>
                     <div class="item-img">
-                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-11-500x350-2.jpg"
-                            data-fancybox="gallery" id="single_image3">
-                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-11-500x350-2.jpg"
-                                alt="" />
-                        </a>
+                        <a href="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                            data-fancybox="gallery" id="single_image16">
+                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                                alt="" /></a>
                     </div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-6.jpg"
-                            data-fancybox="gallery" id="single_image4"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-6-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-2.jpg"
-                            data-fancybox="gallery" id="single_image5"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-2-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-20.jpg"
-                            data-fancybox="gallery" id="single_image6"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-20-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-8.jpg"
-                            data-fancybox="gallery" id="single_image7"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-8-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-19.jpg"
-                            data-fancybox="gallery" id="single_image8"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-19-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-1.jpg"
-                            data-fancybox="gallery" id="single_image9"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-1-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-7.jpg"
-                            data-fancybox="gallery" id="single_image10"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-7-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-9.jpg"
-                            data-fancybox="gallery" id="single_image11"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-9-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-3.jpg"
-                            data-fancybox="gallery" id="single_image12"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-3-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-17.jpg"
-                            data-fancybox="gallery" id="single_image13"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-17-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-18.jpg"
-                            data-fancybox="gallery" id="single_image14"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-18-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-4.jpg"
-                            data-fancybox="gallery" id="single_image15"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-4-500x350-2.jpg"
-                                alt="" /></a></div>
-                    <div class="item-img"><a href="uploads/files/2022/04/18/banner-project-vncn-16.jpg"
-                            data-fancybox="gallery" id="single_image16"><img
-                                data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
-                                alt="" /></a></div>
+                    <div class="item-img">
+                        <a href="uploads/files/2022/04/18/banner-project-vncn-16.jpg" data-fancybox="gallery"
+                            id="single_image16">
+                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                                alt="" /></a>
+                    </div>
+                    <div class="item-img">
+                        <a href="uploads/files/2022/04/18/banner-project-vncn-16.jpg" data-fancybox="gallery"
+                            id="single_image16">
+                            <img data-lazy="https://vesinhcongnghiep.com/uploads/files/2022/04/18/thumbs/banner-project-vncn-16-500x350-2.jpg"
+                                alt="" /></a>
+                    </div>
                 </div>
             </div>
 
@@ -449,20 +428,20 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
         var app = new Vue({
-            el: '#service',
+            el: '#news',
             data: {
                 items: [],
-                servicesDetailRoute: @json(route('client.services.detail', ['slug' => ':slug']))
+                servicesDetailRoute: @json(route('client.news.detail', ['slug' => ':slug']))
 
             },
             mounted() {
                 // data from backend
-                this.items = {!! json_encode($services) !!};
+                this.items = {!! json_encode($news) !!};
             },
             computed: {
                 formatDescription: function() {
                     return this.items.map(function(item) {
-                        return item.desc.slice(0, 100) + '...';
+                        return item.content.slice(0, 100);
                     });
                 }
             },

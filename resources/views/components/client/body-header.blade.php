@@ -5,15 +5,17 @@
                 <div class="d-none d-lg-block col-md-2 col-lg-2">
                     <div class="logo_web">
                         <a href="{{ route('home') }}">
-                            <img src="" alt="logo header 1" data-pagespeed-url-hash="4270396041" />
+                            <img src="{{ url($setting->logo) }}" style="height: 67px; width: 73px;" alt="logo header 1"
+                                data-pagespeed-url-hash="4270396041" />
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-lg-8 px-lg-0">
                     <div class="menu_main">
                         <nav class="navbar navbar-expand-lg navbar-dark p-lg-0">
-                            <a class="d-lg-none" href="{{ route('home') }}" style="width: 25%;">
-                                <img src="" alt="logo header 2" data-pagespeed-url-hash="4270396041" />
+                            <a class="d-lg-none" href="{{ route('home') }}" style="width: 25%; " >
+                                <img src="{{ url($setting->logo) }}" style="height:60px" alt="logo header 2"
+                                    data-pagespeed-url-hash="4270396041" />
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>

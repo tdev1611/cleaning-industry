@@ -5,17 +5,26 @@ namespace App\Services\Client;
 use App\Models\Service;
 use App\Models\Introduce;
 use App\Models\CategoryNew;
+use App\Models\SettingWeb;
 
 
 class HeaderNavService
 {
 
-    protected $service, $introduce, $category;
-    function __construct(Service $service, Introduce $introduce, CategoryNew $category)
+    protected $service, $introduce, $category, $setting;
+    function __construct(Service $service, Introduce $introduce, CategoryNew $category, SettingWeb $settingWeb)
     {
         $this->service  = $service;
         $this->introduce  = $introduce;
         $this->category  = $category;
+        $this->setting  = $settingWeb;
+    }
+
+
+    // logo header 
+    function logoNav()
+    {
+        return $this->setting->where('status', 1)->first();
     }
 
 
@@ -32,7 +41,8 @@ class HeaderNavService
 
 
     // Introduce
-    function getIntro() {
+    function getIntro()
+    {
         return $this->introduce->where('status', 1)->first();
     }
 

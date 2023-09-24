@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ContactController;
@@ -16,6 +17,12 @@ use App\Http\Controllers\Admin\NewController;
 
 Route::get('/', function () {
 })->name('admin.home');
+
+
+
+
+Route::get('/', [DashboardController::class, 'index'])->name('admin.home');
+
 
 // setting
 Route::resource('setting', SettingController::class, ['as' => 'admin']);

@@ -20,4 +20,9 @@ class CategoryNew extends Model
     {
         return $this->hasMany(News::class);
     }
+
+    // litmit 6
+    function newLimit(){
+        return $this->hasMany(News::class)->limit(6);
+    }
 }

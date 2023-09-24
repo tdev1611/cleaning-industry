@@ -25,6 +25,7 @@ class BodyHeader extends Component
         $services = $this->headerNavService->getService();
         $categories = $this->headerNavService->getCategory();
         $introduce = $this->headerNavService->getIntro();
-        return view('components.client.body-header', compact('services', 'introduce', 'categories'));
+        $setting = $this->headerNavService->logoNav();
+        return view('components.client.body-header', compact('services', 'introduce', 'categories','setting'));
     }
 }

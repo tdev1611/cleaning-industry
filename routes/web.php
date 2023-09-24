@@ -16,6 +16,10 @@ use App\Http\Controllers\Client\IntroduceController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'admin'], function () {
+    include 'admin.php';
+});
+
 
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
@@ -62,6 +66,3 @@ Route::get('/tin-tuc/{slug}', [NewsController::class, 'detail'])->name('client.n
 // });
 
 
-Route::group(['prefix' => 'admin'], function () {
-    include 'admin.php';
-});

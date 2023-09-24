@@ -1,5 +1,5 @@
 @extends('client.layout')
-@section('title',$service->title)
+@section('title', $service->title)
 @section('content')
     <div class="container body articleDetail">
         <div class="row mb-5">
@@ -36,24 +36,7 @@
                             TIN TỨC MỚI
                         </div>
                         <article class="s-sideNavArticle">
-                            <div class="box_list_news">
-                                <img class="lazy " src="../themes/vscn-2020/assets/owlcarousel/assets/ajax-loader.gif"
-                                    data-src="https://vesinhcongnghiep.com/uploads/files/2023/04/14/thumbs/May-nuoc-nong-1-1--105x95.png"
-                                    alt="" />
-                                <h3 class="title">
-                                    <a href="phan-biet-cac-loai-may-nuoc-nong-va-cach-chon-mua-san-pham-phu-hop.html">
-                                        Phân biệt các loại máy nước nóng và cách chọn mua sản phẩm phù hợp
-                                    </a>
-                                </h3>
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <i class="fa-solid fa-calendar-days"></i>
-
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
+                            <x-client.latest-news />
                         </article>
                     </nav>
                     <nav class="s-sideNav mt-5">
@@ -61,16 +44,7 @@
                         <div class="s-sideNavName">
                             DANH MỤC TIN TỨC
                         </div>
-                        <ul class="links categorys_links">
-                            <li class="d-flex justify-content-between">
-                                <a href="../tin-cong-ty.html">
-                                    Tin Công Ty
-                                </a>
-                                <a href="../tin-cong-ty.html"><i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </li>
-
-                        </ul>
+                        <x-client.category-new />
                     </nav>
                     {{-- <nav class="s-sideNav mt-5">
                             <div class="advertise-slider-detail owl-carousel owl-theme">
@@ -95,7 +69,8 @@
                     <div class="tips-main media">
                         <div class="tips-img">
                             <a href="{{ route('client.services.detail', $service->slug) }}">
-                                <img class="lazy" src="{{ url($service->image) }}" alt="{{ $service->title }}" />
+                                <img class="lazy" style="width: 150px; height:100px" src="{{ url($service->image) }}"
+                                    alt="{{ $service->title }}" />
                             </a>
                         </div>
                         <div class="tips-content w-100"><a

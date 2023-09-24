@@ -19,6 +19,7 @@ class NewsController extends Controller
         $this->new = $new;
     }
 
+
     function index($slug)
     {
         $category = $this->category->where('slug', $slug)->with('news')->first();
@@ -28,6 +29,7 @@ class NewsController extends Controller
     function detail($slug)
     {
         $new = $this->new->where('slug', $slug)->first();
-        return view('client.news.detail', compact('new'));
+        $category = $this->category->where('id', $new->category_new_id)->with('newLimit')->first();
+        return view('client.news.detail', compact('new','category'));
     }
 }
